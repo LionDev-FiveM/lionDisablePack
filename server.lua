@@ -43,16 +43,11 @@ end
 
 
 
-
-
-
-
-
 Citizen.CreateThread(function()
     local vRaw = LoadResourceFile(GetCurrentResourceName(), 'version.json')
     if vRaw and Config.VersionCheck then
         local v = json.decode(vRaw)
-        local url = 'https://raw.githubusercontent.com/LionDev-FiveM/lionDRP/main/lionDRP/version.json'
+        local url = 'https://raw.githubusercontent.com/LionDev-FiveM/lionDisablePack/main/version.json'
         PerformHttpRequest(url, function(code, res)
             if code == 200 then
                 local rv = json.decode(res)
